@@ -1,0 +1,86 @@
+html {
+  height: 100vh;
+}
+
+body {
+  background-color: #375bf4;
+  color: white;
+  font-family: 'Gotham Pro';
+  line-height: normal;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    width: calc(150% * 2);
+    height: calc(150% * 2);
+    position: absolute;
+    background: rgb(17, 188, 135);
+    background: linear-gradient(
+      49deg,
+      rgba(17, 188, 135, 0) 0%,
+      rgba(17, 188, 135, 0.6954131994594712) 10%,
+      rgba(17, 188, 135, 0.8) 25%,
+      rgba(17, 188, 135, 0.9026961126247374) 33%,
+      rgba(17, 188, 135, 0.9475140397956058) 41%,
+      rgba(17, 188, 135, 1) 50%,
+      rgba(17, 188, 135, 0.9475140397956058) 60%,
+      rgba(17, 188, 135, 0.9026961126247374) 67%,
+      rgba(17, 188, 135, 0.8) 76%,
+      rgba(17, 188, 135, 0.6982143199076505) 90%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    content: '';
+    left: -170%;
+    top: 0%;
+    animation: body-bg 10s infinite;
+  }
+}
+
+main {
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1140px;
+  margin: 0 auto;
+
+  @media (max-width: 1150px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 650px) {
+    padding: 0;
+    width: 300px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+@keyframes body-bg {
+  0% {
+    left: -170%;
+    top: 0%;
+  }
+
+  50% {
+    left: -0%;
+    top: -170%;
+  }
+
+  100% {
+    left: -170%;
+    top: 0%;
+  }
+}
