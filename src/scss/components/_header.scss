@@ -1,0 +1,9 @@
+.header {
+  padding-top: 44px;
+  padding-bottom: 44px;
+
+  @media (max-width: 650px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

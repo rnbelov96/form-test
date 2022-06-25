@@ -6,5 +6,110 @@
     <title>Форма обратной связи</title>
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <img
+          src="./img/icons/logo.svg"
+          alt="Логотип компании"
+          width="132"
+          height="17"
+          class="header__logo"
+        />
+      </div>
+    </header>
+
+    <main>
+      <section class="form">
+        <div class="container">
+          <form class="form__form-box js-form">
+            <div class="form__content-wrapper">
+              <div class="form__left-side">
+                <div class="form__input-box">
+                  <label for="name" class="form__input-label">Твоё имя</label
+                  ><input
+                    id="name"
+                    data-input="name"
+                    name="name"
+                    type="text"
+                    class="form__input"
+                  />
+                  <p class="form__input-error-message">Введите имя</p>
+                  <div class="form__input-error-icon"></div>
+                </div>
+                <div class="form__input-box">
+                  <label for="phone" class="form__input-label">Телефон</label
+                  ><input
+                    id="phone"
+                    placeholder="+7 (___) ___-__-__"
+                    type="tel"
+                    data-input="phone"
+                    name="phone"
+                    class="form__input"
+                  />
+                  <p class="form__input-error-message">
+                    Введите корректный телефон
+                  </p>
+                  <div class="form__input-error-icon"></div>
+                </div>
+                <div class="form__input-box">
+                  <label for="email" class="form__input-label">Почта</label
+                  ><input
+                    id="email"
+                    data-input="email"
+                    name="email"
+                    type="email"
+                    class="form__input"
+                  />
+                  <p class="form__input-error-message">
+                    Введите корректный Email
+                  </p>
+                  <div class="form__input-error-icon"></div>
+                </div>
+              </div>
+              <div class="form__right-side">
+                <div class="form__input-box">
+                  <label for="select" class="form__input-label"
+                    >Я хочу у вас работать:</label
+                  >
+                  <div class="form__select-box js-custom-select">
+                    <select name="work" value="Дизайнером" id="select">
+                      <option value="Дизайнером">Дизайнером</option>
+                      <option value="Дизайнером">Дизайнером</option>
+                      <option value="Разработчиком">Разработчиком</option>
+                      <option value="Аккаунтом">Аккаунтом</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__input-box">
+                  <label for="letter" class="form__input-label">Письмо</label
+                  ><textarea
+                    id="letter"
+                    name="letter"
+                    class="form__textarea"
+                    data-input="letter"
+                  ></textarea>
+                </div>
+                <div class="form__attach-box">
+                  <input
+                    id="file"
+                    type="file"
+                    data-input="file"
+                    name="cv"
+                    class="form__attach-input visually-hidden"
+                  /><label for="file" class="form__attach-label"
+                    >Прикрепить файл</label
+                  >
+                  <div class="form__attach-file-box form__attach-file-box_hidden js-file-box">
+                    <button type="button" class="form__attach-delete js-file-delete-btn"></button>
+                    <p class="form__attach-file-name js-file-name-label">file.pdf</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="button form__submit-btn">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
