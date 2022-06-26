@@ -1,9 +1,22 @@
 .form {
+  height: 100%;
   padding-top: 24px;
+  padding-bottom: 30px;
+
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
   @media (max-width: 650px) {
     padding-top: 0;
   }
+}
+
+.form__form-box {
+  width: 100%;
 }
 
 .form__content-wrapper {

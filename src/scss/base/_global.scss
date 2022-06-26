@@ -1,40 +1,39 @@
 html {
-  height: 100vh;
+  height: 100%;
+}
+
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
 }
 
 body {
-  background-color: #375bf4;
   color: white;
   font-family: 'Gotham Pro';
   line-height: 1;
   height: 100%;
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    width: calc(150% * 2);
-    height: calc(150% * 2);
-    position: absolute;
-    background: rgb(17, 188, 135);
-    background: linear-gradient(
-      45deg,
-      rgba(17, 188, 135, 0) 0%,
-      rgba(32, 151, 177, 0.5382528011204482) 15%,
-      rgba(17, 188, 135, 0.6923144257703081) 32%,
-      rgba(17, 188, 135, 1) 49%,
-      rgba(17, 188, 135, 0.6951155462184874) 69%,
-      rgba(32, 151, 177, 0.5214460784313726) 83%,
-      rgba(17, 188, 135, 0) 100%
-    );
-    content: '';
-    left: -170%;
-    top: 0%;
-    animation: body-bg 10s infinite;
-  }
+  background-attachment: fixed;
+  background-color: #375bf4;
+  background-image: linear-gradient(
+    49deg,
+    rgba(55, 91, 244, 1) 0%,
+    rgba(32, 151, 177, 1) 25%,
+    rgba(17, 188, 135, 1) 46%,
+    rgba(17, 188, 135, 1) 50%,
+    rgba(17, 188, 135, 1) 55%,
+    rgba(32, 151, 177, 1) 75%,
+    rgba(55, 91, 244, 1) 100%
+  );
+  animation: body-bg 8s infinite;
+  background-size: 340%;
+  background-position: -200% 0%;
 }
 
 main {
   overflow: hidden;
+  flex: 1 0 auto;
 }
 
 .container {
@@ -66,17 +65,14 @@ main {
 
 @keyframes body-bg {
   0% {
-    left: -170%;
-    top: 0%;
+    background-position: -200% 0%;
   }
 
   50% {
-    left: -0%;
-    top: -170%;
+    background-position: -270% 0%;
   }
 
   100% {
-    left: -170%;
-    top: 0%;
+    background-position: -200% 0%;
   }
 }
