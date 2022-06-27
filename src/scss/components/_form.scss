@@ -11,8 +11,28 @@
   }
 
   @media (max-width: 650px) {
-    padding-top: 0;
+    padding-top: 10px;
   }
+}
+
+.form__title {
+  font-size: 43px;
+  line-height: 1.44;
+  margin-bottom: 35px;
+
+  @media (max-width: 1150px) {
+    font-size: 35px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+
+  @include mobile-mb;
 }
 
 .form__form-box {
